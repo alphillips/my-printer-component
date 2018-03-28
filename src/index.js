@@ -11,7 +11,7 @@ class Commodities extends React.Component {
       commodities: props.commodities || [],
       activeCommodities: props.activeCommodities || [],
       onlyShowCommodities: props.onlyShowCommodities || false,
-      remotePrint: props.activeCommodities && props.activeCommodities.length > 1
+      remotePrint: props.activeCommodities && props.activeCommodities.length > 0
     };
   }
 
@@ -76,7 +76,7 @@ class Commodities extends React.Component {
               </div>
             )}
 
-                {this.state.remotePrint || this.state.onlyShowCommodities && (
+                {(this.state.remotePrint || this.state.onlyShowCommodities) && (
                   <div>
                     <h3>My Printer available for following Commondities</h3>
                     <p>Select commodities to enable My Printer.</p>
