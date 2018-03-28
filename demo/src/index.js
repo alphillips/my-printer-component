@@ -37,6 +37,7 @@ class Demo extends Component {
         ref="commodities"
         commodities={this.state.commodities}
         activeCommodities={this.state.activeCommodities}
+        onlyShowCommodities={false}
       />
     )}
     </MuiThemeProvider>
