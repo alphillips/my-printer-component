@@ -27,6 +27,10 @@ class Demo extends Component {
     }
   }
 
+  handleSubmit = () => {
+    this.refs.commodities.handleSave()
+  }
+
   render() {
     return (<div className="uikit-body">
     <MuiThemeProvider>
@@ -38,10 +42,12 @@ class Demo extends Component {
         commodities={this.state.commodities}
         activeCommodities={this.state.activeCommodities}
         onlyShowCommodities={false}
+        standAlonePage={false}
       />
     )}
     </MuiThemeProvider>
 
+    <button onClick={this.handleSubmit}>Submit from Host</button>
     </div>
   )}
 }

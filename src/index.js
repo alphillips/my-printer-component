@@ -11,7 +11,8 @@ class Commodities extends React.Component {
       commodities: props.commodities || [],
       activeCommodities: props.activeCommodities || [],
       onlyShowCommodities: props.onlyShowCommodities || false,
-      remotePrint: props.activeCommodities && props.activeCommodities.length > 0
+      remotePrint: props.activeCommodities && props.activeCommodities.length > 0,
+      standAlonePage: props.standAlonePage || false
     };
   }
 
@@ -28,6 +29,20 @@ class Commodities extends React.Component {
       }));
     };
   };
+
+  handleSave = () => {
+    console.log("child save called")
+    let data = {}
+    data.activeCommodities = this.getDetails()
+
+    if (this.state.remotePrint && this.state.activeCommodities.length === 0) {
+      this.setState((prevState, props) => ({
+        info: "Select at least one commodity to enable my printer"
+      }));
+    }
+
+    return data
+  }
 
   handleCommodityChange = id => {
     return () => {
@@ -56,7 +71,6 @@ class Commodities extends React.Component {
         <div>
           {!this.state.onlyShowCommodities && (
               <div>
-                <a className="back-button uikit-direction-link uikit-direction-link--left" onClick={this.onClose}>Back</a>
                 <h2>My Printer</h2>
 
                 <Checkbox
@@ -197,12 +211,12 @@ class Commodities extends React.Component {
                       </p>
                     </div>
                 )}
-                {!this.state.onlyShowCommodities && (
+                {this.state.standAlonePage &&
                 <button
                   className="uikit-btn"
-                  onClick={this.saveRemotePrint}
+                  onClick={this.handleSave}
                 >Save </button>
-              )}
+              }
         </div>
       </div>
     );
