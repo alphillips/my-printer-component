@@ -12,7 +12,8 @@ class Commodities extends React.Component {
       activeCommodities: props.activeCommodities || [],
       onlyShowCommodities: props.onlyShowCommodities || false,
       remotePrint: props.activeCommodities && props.activeCommodities.length > 0,
-      standAlonePage: props.standAlonePage || false
+      standAlonePage: props.standAlonePage || false,
+      standAloneLabel: props.standAloneLabel || "Save"
     };
   }
 
@@ -215,7 +216,7 @@ class Commodities extends React.Component {
                 <button
                   className="uikit-btn"
                   onClick={this.handleSave}
-                >Save </button>
+                >{this.state.standAloneLabel}</button>
               }
         </div>
       </div>
