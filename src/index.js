@@ -96,7 +96,7 @@ class Commodities extends React.Component {
                     <h3>My Printer available for following Commondities</h3>
                     <p>Select commodities to enable My Printer.</p>
                     <div>
-                      {this.state.commodities.map((commodity, i) => (
+                      {this.state.commodities && this.state.commodities.map((commodity, i) => (
                         <Checkbox
                           key={i + commodity.value}
                           label={commodity.label}
