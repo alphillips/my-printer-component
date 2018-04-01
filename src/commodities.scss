@@ -25,6 +25,11 @@ $darksmoke: darken(whitesmoke, 10%);
     height: 300px;
   }
 
+  .extra-info {
+    margin-top:0.5em;
+    max-width: 100%;
+  }
+
   .declarationTNC {
     border: 1px solid $darksmoke;
     padding: 20px;

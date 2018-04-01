@@ -11,7 +11,7 @@ class Commodities extends React.Component {
       commodities: props.commodities || [],
       activeCommodities: props.activeCommodities || [],
       onlyShowCommodities: props.onlyShowCommodities || false,
-      remotePrint: props.activeCommodities && props.activeCommodities.length > 0,
+      remotePrint: props.activeCommodities && props.activeCommodities.length > 0 || false,
       standAlonePage: props.standAlonePage || false,
       standAloneLabel: props.standAloneLabel || "Save"
     };
