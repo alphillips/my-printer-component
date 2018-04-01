@@ -69,7 +69,7 @@ class Commodities extends React.Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="my-printer-component">
           {!this.state.onlyShowCommodities && (
               <div>
                 <h2>My Printer</h2>
@@ -91,24 +91,27 @@ class Commodities extends React.Component {
               </div>
             )}
 
+            {this.state.remotePrint && (
+              <div>
+                <h3>My Printer available for following Commondities</h3>
+                <p>Select commodities to enable My Printer.</p>
+              </div>
+            )}
+
                 {(this.state.remotePrint || this.state.onlyShowCommodities) && (
                   <div>
-                    <h3>My Printer available for following Commondities</h3>
-                    <p>Select commodities to enable My Printer.</p>
-                    <div>
-                      {this.props.commodities && this.props.commodities.map((commodity, i) => (
-                        <Checkbox
-                          key={i + commodity.value}
-                          label={commodity.label}
-                          checked={this.state.activeCommodities.includes(commodity.value)}
-                          onCheck={this.handleCommodityChange(commodity.value)}
-                        />
-                      ))}
-                    </div>
+                    {this.props.commodities && this.props.commodities.map((commodity, i) => (
+                      <Checkbox
+                        key={i + commodity.value}
+                        label={commodity.label}
+                        checked={this.state.activeCommodities.includes(commodity.value)}
+                        onCheck={this.handleCommodityChange(commodity.value)}
+                      />
+                    ))}
                   </div>
                 )}
 
-                {!this.state.onlyShowCommodities && (
+                {(this.state.remotePrint && !this.state.onlyShowCommodities) && (
                     <div className="declaration">
                       <p>
                         By clicking the save button below, I hereby agree to

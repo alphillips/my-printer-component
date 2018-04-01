@@ -1,17 +1,7 @@
 $darken-text: darken(whitesmoke, 30%);
 $darksmoke: darken(whitesmoke, 10%);
 
-.contact-person-component {
-  position: relative;
-  .custom-width {
-    width: 30%!important;
-    float: left;
-    margin-right: 20px;
-
-    &.search {
-      width: 20%!important;
-    }
-  }
+.my-printer-component {
   .hide {
     display: none;
   }
@@ -49,10 +39,6 @@ $darksmoke: darken(whitesmoke, 10%);
     max-width: 100%!important;
     margin-bottom: 0;
     margin-top: 10px;
-  }
-
-  .other-client-container{
-    position: relative;
   }
 
   a {
