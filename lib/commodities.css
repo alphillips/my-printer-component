@@ -6,6 +6,20 @@
     margin-right: 20px; }
     .contact-person-component .custom-width.search {
       width: 20% !important; }
+  .contact-person-component .hide {
+    display: none; }
+  .contact-person-component .declaration {
+    border: 1px solid gainsboro;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 80%;
+    overflow: scroll;
+    height: 300px; }
+  .contact-person-component .declarationTNC {
+    border: 1px solid gainsboro;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 80%; }
   .contact-person-component .custom-width-button {
     display: inline-block; }
     .contact-person-component .custom-width-button button {

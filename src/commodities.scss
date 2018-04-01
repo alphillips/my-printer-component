@@ -1,4 +1,5 @@
 $darken-text: darken(whitesmoke, 30%);
+$darksmoke: darken(whitesmoke, 10%);
 
 .contact-person-component {
   position: relative;
@@ -11,6 +12,26 @@ $darken-text: darken(whitesmoke, 30%);
       width: 20%!important;
     }
   }
+  .hide {
+    display: none;
+  }
+
+  .declaration {
+    border: 1px solid $darksmoke;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 80%;
+    overflow: scroll;
+    height: 300px;
+  }
+
+  .declarationTNC {
+    border: 1px solid $darksmoke;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 80%;
+  }
+
   .custom-width-button {
     display: inline-block;
     button {
