@@ -15,6 +15,7 @@ class Commodities extends React.Component {
       standAlonePage: props.standAlonePage || false,
       standAloneLabel: props.standAloneLabel || "Save"
     };
+    this.errObj = {}
   }
 
   getDetails = () => {
@@ -31,18 +32,32 @@ class Commodities extends React.Component {
     };
   };
 
+  getErrorObj = () => {
+    return this.errObj
+  }
+
   handleSave = () => {
-    console.log("child save called")
     let data = {}
+
     data.activeCommodities = this.getDetails()
 
+    this.errObj = {}
+    this.errObj.type = "error"
+
     if (this.state.remotePrint && this.state.activeCommodities.length === 0) {
-      this.setState((prevState, props) => ({
-        info: "Select at least one commodity to enable my printer"
-      }));
+      this.errObj.msg = "Select at least one commodity to enable my printer"
+    } else {
+      this.errObj.msg = ""
     }
 
+    this.props.myPrinterMsg(this.errObj)
     return data
+
+    if(this.state.standAlonePage){
+      if(this.errObj.msg === "") {
+        this.props.handleMyPrinterSave()
+      }
+    }
   }
 
   handleCommodityChange = id => {
