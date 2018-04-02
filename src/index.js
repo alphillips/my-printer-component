@@ -51,7 +51,6 @@ class Commodities extends React.Component {
     }
 
     this.props.myPrinterMsg(this.errObj)
-    return data
 
     if(this.state.standAlonePage){
       if(this.errObj.msg === "") {
