@@ -37,9 +37,6 @@ class Commodities extends React.Component {
   }
 
   handleSave = () => {
-    let data = {}
-
-    data.activeCommodities = this.getDetails()
 
     this.errObj = {}
     this.errObj.type = "error"
