@@ -122,7 +122,7 @@ class Commodities extends React.Component {
                   </div>
                 )}
 
-                {(this.state.remotePrint && !this.state.onlyShowCommodities) && (
+                {this.state.remotePrint && (
                     <div className="declaration">
                       <p>
                         By clicking the save button below, I hereby agree to

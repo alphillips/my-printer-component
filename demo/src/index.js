@@ -16,7 +16,7 @@ let commodities = [
   {value: "X",label: "All Other Goods"}
 ]
 
-let activeCommodities = ["X"]
+let activeCommodities = []
 
 class Demo extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ class Demo extends Component {
         commodities={this.state.commodities}
         activeCommodities={this.state.activeCommodities}
         onlyShowCommodities={false}
-        standAlonePage={false}
+        standAlonePage={true}
       />
     )}
     </MuiThemeProvider>

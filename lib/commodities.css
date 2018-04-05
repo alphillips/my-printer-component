@@ -21,8 +21,9 @@
 
 .my-printer-component .custom-width-button {
   display: inline-block; }
-  .my-printer-component .custom-width-button button {
-    line-height: 17px; }
+
+.my-printer-component .custom-width-button button {
+  line-height: 17px; }
 
 .my-printer-component .info-text {
   font-size: 80%;
