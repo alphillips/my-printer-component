@@ -37,12 +37,11 @@ class Commodities extends React.Component {
     this.errObj.type = "error"
     this.errObj.msg = ""
 
-    this.handleSave()
+    this.triggerErrObj()
     return this.errObj
   }
 
-  handleSave = () => {
-
+  triggerErrObj = () => {
     this.errObj = {}
     this.errObj.type = "error"
 
@@ -51,6 +50,11 @@ class Commodities extends React.Component {
     } else {
       this.errObj.msg = ""
     }
+  }
+
+  handleSave = () => {
+
+    this.triggerErrObj()
 
     this.props.myPrinterMsg(this.errObj)
 
