@@ -33,6 +33,10 @@ class Commodities extends React.Component {
   };
 
   getErrorObj = () => {
+    this.errObj = {}
+    this.errObj.type = "error"
+    this.errObj.msg = ""
+    
     this.handleSave()
     return this.errObj
   }
