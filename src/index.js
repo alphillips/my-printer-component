@@ -107,7 +107,7 @@ class Commodities extends React.Component {
               </div>
             )}
 
-            {this.state.remotePrint && !this.state.onlyShowCommodities (
+            {(this.state.remotePrint && !this.state.onlyShowCommodities) && (
               <div>
                 <h3>My Printer available for following Commodities</h3>
                 <p>Select commodities to enable My Printer.</p>
