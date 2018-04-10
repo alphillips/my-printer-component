@@ -105,7 +105,7 @@ class Commodities extends React.Component {
 
             {this.state.remotePrint && (
               <div>
-                <h3>My Printer available for following Commondities</h3>
+                <h3>My Printer available for following Commodities</h3>
                 <p>Select commodities to enable My Printer.</p>
               </div>
             )}
