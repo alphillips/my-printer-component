@@ -51,14 +51,14 @@ class Commodities extends React.Component {
       }else {
         this.errObj.msg = ""
       }
-    } else {
+    }
+    if(!this.state.remotePrint) {
       if(this.state.activeCommodities.length === 0) {
         this.errObj.msg = "Select at least one commodity"
       }else {
         this.errObj.msg = ""
       }
     }
-
   }
 
   handleSave = () => {
