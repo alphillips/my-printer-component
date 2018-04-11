@@ -45,17 +45,16 @@ class Commodities extends React.Component {
     this.errObj = {}
     this.errObj.type = "error"
 
-    if (this.state.remotePrint) {
-      if(this.state.activeCommodities.length === 0) {
+    if(!this.state.onlyShowCommodities) {
+      if (this.state.remotePrint && this.state.activeCommodities.length === 0) {
         this.errObj.msg = "Select at least one commodity to enable my printer"
-      }else {
+      } else {
         this.errObj.msg = ""
       }
-    }
-    if(!this.state.remotePrint) {
-      if(this.state.activeCommodities.length === 0) {
+    }else{
+      if (this.state.remotePrint && this.state.activeCommodities.length === 0) {
         this.errObj.msg = "Select at least one commodity"
-      }else {
+      } else {
         this.errObj.msg = ""
       }
     }
