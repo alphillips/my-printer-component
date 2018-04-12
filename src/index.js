@@ -142,7 +142,7 @@ class Commodities extends React.Component {
                 {this.state.remotePrint && (
                     <div className="declaration">
                       <p>
-                        By submitting this request, I hereby agree to
+                        By clicking the {this.state.standAloneLabel} button below, I hereby agree to
                         and accept the following:
                       </p>
                       <ul>
