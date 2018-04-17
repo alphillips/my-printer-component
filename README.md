@@ -29,7 +29,20 @@ let activeCommodities = ["X"]
   ref="commodities"
   commodities={this.state.commodities}
   activeCommodities={this.state.activeCommodities}
+  onlyShowCommodities={true}
+  standAlonePage={false}
+  myPrinterMsg={this.updateMsg}
 />
+
+updateMsg = status => {
+  this.setState((prevState, props) => ({
+    [status.type]: status.msg
+  }));
+
+  if (status.msg !== "") {
+    window.scroll(0, 0);
+  }
+};
 
 ```
 
@@ -39,6 +52,9 @@ let activeCommodities = ["X"]
 | ------------- |:-------------:| -----:|
 | commodities      | object | data.commodities |
 | activeCommodities      | object | data.activeCommodities |
+| onlyShowCommodities      | state | so we can use it for Export Commodities |
+| standAlonePage      | boolean | Has own Save button |
+| myPrinterMsg      | object | update parent page state |
 
 
 
