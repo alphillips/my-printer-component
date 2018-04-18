@@ -37,13 +37,14 @@ let activeCommodities = ["X"]
 updateMsg = status => {
   return value => {
     this.setState((prevState, props) => ({
-      [status.type]: value.msg
+      [value.type]: value.msg
     }));
-  }
-  if (status.msg !== "") {
-    window.scroll(0, 0);
+    if (value.msg !== "") {
+      window.scroll(0, 0);
+    }
   }
 };
+
 
 ```
 
