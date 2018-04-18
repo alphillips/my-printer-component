@@ -31,14 +31,15 @@ let activeCommodities = ["X"]
   activeCommodities={this.state.activeCommodities}
   onlyShowCommodities={true}
   standAlonePage={false}
-  myPrinterMsg={this.updateMsg}
+  myPrinterMsg={this.updateMsg(status)}
 />
 
 updateMsg = status => {
-  this.setState((prevState, props) => ({
-    [status.type]: status.msg
-  }));
-
+  return value => {
+    this.setState((prevState, props) => ({
+      [status.type]: value.msg
+    }));
+  }
   if (status.msg !== "") {
     window.scroll(0, 0);
   }
