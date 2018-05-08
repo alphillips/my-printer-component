@@ -20,7 +20,9 @@ class Commodities extends React.Component {
 
   getDetails = () => {
     let remotePrintCommodities = []
-    remotePrintCommodities = this.state.activeCommodities
+    if (this.state.remotePrint) {
+      remotePrintCommodities = this.state.activeCommodities
+    }
     return remotePrintCommodities
   }
 
