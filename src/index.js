@@ -237,7 +237,7 @@ class Commodities extends React.Component {
                         accordance with the Australian Privacy Principles.
                       </p>
                       <p>
-                        See the department’s <a href="">Privacy Policy </a>web
+                        See the department’s <a href="http://www.agriculture.gov.au/about/privacy">Privacy Policy </a>web
                         page to learn more about accessing or correcting
                         personal information or making a complaint.
                         Alternatively, telephone the department on +61 6272
