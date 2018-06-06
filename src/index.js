@@ -20,7 +20,7 @@ class Commodities extends React.Component {
     this.errObj = {}
   }
 
-  componentWillMount() {
+  componentDidMount() {
     api.getRemotePrintTAC().then(data => {
       let tac = {}
       tac.__html = data.body.toString('html').replace(/<a /g, '<a rel="external" ')
