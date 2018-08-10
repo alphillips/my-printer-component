@@ -120,7 +120,7 @@ class Commodities extends React.Component {
                   onCheck={this.onCheck("remotePrint")}
                 />
                 <p className="extra-info">
-                  The Department allows some documents to be printed in locations outside of the Department's offices. In these cases, clients can print on their premises once they have been assessed and cleared to do so. Select this option if you would like to be assessed for My Printer. If you select no you can apply for My Printer at a later time via the Account menu within the application.
+                  The Department allows some documents to be printed in locations outside of the Department's offices. In these cases, clients can print on their premises once they have been assessed and cleared to do so. Select this option if you would like to be assessed for My Printer. If you select no, you can apply for My Printer at a later time via the Account menu within the application.
                 </p>
               </div>
             )}
