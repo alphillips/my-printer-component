@@ -88,19 +88,24 @@ class Commodities extends React.Component {
   handleCommodityChange = id => {
     return () => {
       let hasTarget = this.state.activeCommodities.includes(id);
+      let activeCommodities = null
       if (hasTarget) {
-        this.setState({
-          activeCommodities: this.state.activeCommodities.filter(activeCommodity => activeCommodity !== id)
-        });
+        activeCommodities = this.state.activeCommodities.filter(activeCommodity => activeCommodity !== id)
+        this.setState({activeCommodities});
+        if(this.props.onCommodityChange) {
+          this.props.onCommodityChange(activeCommodities)
+        }
         {this.props.markDirty !== undefined &&
-          this.props.markDirty("activeCommodities", this.state.activeCommodities.filter(activeCommodity => activeCommodity !== id))
+          this.props.markDirty("activeCommodities", activeCommodities)
         }
       } else {
-        this.setState({
-          activeCommodities: [...this.state.activeCommodities, id]
-        });
+        activeCommodities = [...this.state.activeCommodities, id]
+        this.setState({activeCommodities});
+        if(this.props.onCommodityChange) {
+          this.props.onCommodityChange(activeCommodities)
+        }
         {this.props.markDirty !== undefined &&
-          this.props.markDirty("activeCommodities", [...this.state.activeCommodities, id])
+          this.props.markDirty("activeCommodities", activeCommodities)
         }
       }
     };
