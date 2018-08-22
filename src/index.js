@@ -15,15 +15,13 @@ class Commodities extends React.Component {
       remotePrint: props.activeCommodities && props.activeCommodities.length > 0 || false,
       standAlonePage: props.standAlonePage || false,
       standAloneLabel: props.standAloneLabel || "Save",
-      tac:props.tac || null
+      tac:props.tac
     };
     this.errObj = {}
   }
 
   componentWillMount() {
     if(this.state.tac){
-      let tac = {}
-      tac.__html = this.state.tac.body.toString('html').replace(/<a /g, '<a rel="external" ')
       this.setState({tac})
     }
   }
