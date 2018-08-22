@@ -22,7 +22,11 @@ class Commodities extends React.Component {
 
   componentWillMount() {
     if(this.state.tac){
-      this.setState({tac})
+      if(this.state.tac.body) {
+        let tac = {}
+        tac.__html = this.state.tac.body.toString('html').replace(/<a /g, '<a rel="external" ')
+        this.setState({tac})
+      }
     }
   }
 

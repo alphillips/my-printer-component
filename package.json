@@ -1,6 +1,6 @@
 {
   "name": "@react-ag-components/my-printer",
-  "version": "0.3.14",
+  "version": "0.3.16",
   "description": "My Printer React component",
   "main": "lib/index.js",
   "module": "es/index.js",
